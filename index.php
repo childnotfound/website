@@ -15,8 +15,6 @@ $app = new \Slim\Slim();
 # index
 $app->get('/', function() use($app) {
   echo "Hello World";
-  $child = Model::factory('MissingChildren')->orderByExpr('RAND()')->findOne();
-  var_dump($child);
 });
 
 $app->get('/404', function() use($app) {
