@@ -17,8 +17,8 @@ $app->get('/404', function() use($app) {
 });
 
 $app->get('/404.json', function() use($app) {
-  $child = Model::factory('MissingChildren')->orderByExpr('RAND()')->findOne(1);
-  echo json_encode($child); 
+  $child = Model::factory('MissingChildren')->orderByExpr('RAND()')->findOne();
+  echo $child->to_json();
 });
 
 $app->run();
