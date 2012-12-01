@@ -1,4 +1,4 @@
 <?php
-ORM::configure('mysql:host=localhost;dbname=db');
-ORM::configure('username', 'user');
-ORM::configure('password', 'pass');
+$config['db']['database'] = 'database';
+$config['db']['username'] = 'username';
+$config['db']['password'] = 'password';
