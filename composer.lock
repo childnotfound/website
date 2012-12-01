@@ -1,6 +1,112 @@
 {
-    "hash": "57ff01b66f78374ea8e638f687819e45",
+    "hash": "f0c76811cd44167e05b48761ceb9e3b3",
     "packages": [
+        {
+            "name": "kevinsperrine/idiorm",
+            "version": "v2.1.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kevinsperrine/idiorm",
+                "reference": "v2.1.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/kevinsperrine/idiorm/zipball/v2.1.3",
+                "reference": "v2.1.3",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.0"
+            },
+            "time": "2012-10-24 14:34:51",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-0": {
+                    "Idiorm": "src/",
+                    "Orm": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD"
+            ],
+            "authors": [
+                {
+                    "name": "Jamie Matthews",
+                    "email": "jamie.matthews@gmail.com",
+                    "homepage": "http://j4mie.org/",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Kevin Perrine",
+                    "email": "kperrine@gmail.com",
+                    "homepage": "http://kevinperrine.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Completely refactored, PSR compliant, version of Idiorm: a lightweight nearly-zero-configuration object-relational mapper and fluent query builder for PHP5.",
+            "homepage": "https://github.com/kevinsperrine/idiorm",
+            "keywords": [
+                "orm",
+                "idiorm"
+            ]
+        },
+        {
+            "name": "kevinsperrine/paris",
+            "version": "v2.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kevinsperrine/paris",
+                "reference": "v2.0.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/kevinsperrine/paris/zipball/v2.0.3",
+                "reference": "v2.0.3",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.0",
+                "kevinsperrine/idiorm": ">=2.0.0"
+            },
+            "time": "2012-10-24 22:03:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-0": {
+                    "OrmWrapper": "src/",
+                    "Paris": "src/",
+                    "Model": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD"
+            ],
+            "authors": [
+                {
+                    "name": "Jamie Matthews",
+                    "email": "jamie.matthews@gmail.com",
+                    "homepage": "http://j4mie.org/",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Kevin Perrine",
+                    "email": "kperrine@gmail.com",
+                    "homepage": "http://kevinperrine.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Completely refactored, PSR compliant, version of Paris: A lightweight Active Record implementation for PHP5, built on top of Idiorm.",
+            "homepage": "https://github.com/kevinsperrine/paris",
+            "keywords": [
+                "orm",
+                "idiorm",
+                "paris",
+                "active-record"
+            ]
+        },
         {
             "name": "slim/slim",
             "version": "2.1.0",

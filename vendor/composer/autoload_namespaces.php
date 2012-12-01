@@ -7,4 +7,9 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Slim' => $vendorDir . '/slim/slim/.',
+    'Paris' => $vendorDir . '/kevinsperrine/paris/src/',
+    'OrmWrapper' => $vendorDir . '/kevinsperrine/paris/src/',
+    'Orm' => $vendorDir . '/kevinsperrine/idiorm/src/',
+    'Model' => $vendorDir . '/kevinsperrine/paris/src/',
+    'Idiorm' => $vendorDir . '/kevinsperrine/idiorm/src/',
 );
