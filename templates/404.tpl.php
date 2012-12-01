@@ -26,11 +26,10 @@
 			<dd>失蹤原因：</dd>	<dt>{{missingCause}}</dt>
 		</dl>
 	</div>
-	<div class="contact">
-		聯絡資訊、<br /> 協尋資訊
-	</div>
 	<div class="clearer"></div>
 </div>
+<p class="contact">資料來源：兒童福利聯盟基金會，403台中市西區自由路一段98-1號2樓<br />
+		 TEL：886-4-22265905，Email: missing@cwlf.org.tw </p>
 </div>
 		</script>
 		<style type="text/css">
@@ -55,7 +54,6 @@ dl.name-value dd {
 dl.name-value dt { width: 60%; float: left; }
 .notfound-wrapper {
 	padding: 6px;
-	padding-bottom: 18px;
 	border-radius: 5px;
 	background-color: #00adee;
 	box-shadow:2px 2px 8px #06C;
@@ -66,6 +64,15 @@ dl.name-value dt { width: 60%; float: left; }
 	font-size: 24px;
 	color: #fff;
 }
+
+.notfound-wrapper p.contact {
+	text-align: right;
+	padding: 2px;
+	margin: 16px 16px;
+	font-size: 16px;
+	color: #fff;
+}
+
 .child-wrapper { 
 	position: relative;
 	border-radius: 5px;
@@ -74,7 +81,7 @@ dl.name-value dt { width: 60%; float: left; }
 }
 .child-wrapper .title { 
 	float: left;
-	width: 6%;
+	width: 10%;
 	padding: 1%;
 	font-size: 26px;
 	text-align: center;
@@ -82,7 +89,7 @@ dl.name-value dt { width: 60%; float: left; }
 .child-wrapper .avatar {
 	padding: 3px 0px;
 	float: left;
-	width: 24%;
+	width: 30%;
 }
 .child-wrapper .avatar img {
 	width: 100%;
@@ -95,12 +102,7 @@ dl.name-value dt { width: 60%; float: left; }
 }
 .child-wrapper .info {
 	float: left;
-	width: 40%;
-}
-.child-wrapper .contact {
-	padding: 3px 0px;
-	float: left;
-	width: 28%;
+	width: 58%;
 }
 		</style>
 		<script type="text/javascript">
@@ -108,9 +110,7 @@ dl.name-value dt { width: 60%; float: left; }
 $(function() {
 
 	var childTpl = Handlebars.compile( $('#child-tpl').html() );
-    $.getJSON('/404.json', function(data) {
-        $('#wrapper').html( childTpl(data) );
-    });
+	$('#wrapper').html( childTpl(data) );
 
 });
 		</script>
