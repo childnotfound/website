@@ -110,7 +110,9 @@ dl.name-value dt { width: 60%; float: left; }
 $(function() {
 
 	var childTpl = Handlebars.compile( $('#child-tpl').html() );
-	$('#wrapper').html( childTpl(data) );
+    $.getJSON('/404.json', function(data) {
+        $('#wrapper').html( childTpl(data) );
+    });
 
 });
 		</script>
