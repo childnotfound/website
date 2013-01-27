@@ -22,12 +22,31 @@ switch ($config['db']['type']) {
     break;
 }
 
+# Check register information and referrer to see if we allow embedding here
+# XXX: there should be a better place for this function
+function allowEmbedding() {
+  $referrer_host = parse_url($_SERVER['HTTP_REFERER'], PHP_URL_HOST);
+  return !($_SERVER['HTTP_REFERER'] &&
+      $referrer_host !== $_SERVER['SERVER_NAME']/* &&
+      is_host_registered($referrer_host) */);
+}
 
 $app = new \Slim\Slim();
 
 # index
 $app->get('/', function() use($app) {
   echo "Hello World";
+});
+
+# embedd page for other websites
+$app->get('/embedded', function() use($app) {
+  if (!allowEmbedding()) {
+    $app->render('register_first_please.tpl.php');
+
+    return;
+  }
+
+  $app->render('embedded.tpl.php');
 });
 
 $app->get('/404', function() use($app) {
