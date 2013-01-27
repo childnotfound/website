@@ -1,4 +1,12 @@
 <?php
+
+$config['db']['type'] = 'mysql'; // 'mysql' or 'sqlite'
+
+// MySQL specific options
 $config['db']['database'] = 'database';
 $config['db']['username'] = 'username';
 $config['db']['password'] = 'password';
+
+// SQLite specific options
+// DO NOT USE SQLite in the production environment
+$config['db']['filename'] = '/abs/path/to/childnotfound.sqlite';
